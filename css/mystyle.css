@@ -1,3 +1,7 @@
 .menu {
   max-width: 150px;
 }
+
+.pointer {
+  cursor: pointer;
+}

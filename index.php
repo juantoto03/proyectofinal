@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -63,7 +66,7 @@
 				<div class="pull-left">
 					<!-- Logo -->
 					<div class="header-logo">
-						<a class="logo" href="index.html">
+						<a class="logo" href="index.php">
 							<img src="./img/logo.png" alt="">
 						</a>
 					</div>
@@ -99,13 +102,49 @@
 								</div>
 								<strong class="text-uppercase">Mi Cuenta <i class="fa fa-caret-down"></i></strong>
 							</div>
-							<a href="#" class="text-uppercase">Login</a> / <a href="#" class="text-uppercase">Join</a>
+							<a class="text-uppercase pointer" data-toggle="modal" data-target="#myModal">Login</a> / <a href="session/logout.php" class="text-uppercase">Join</a>
+							<!-- The Modal -->
+							<div class="modal fade" id="myModal">
+								<div class="modal-dialog modal-sm">
+									<div class="modal-content">
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h4 class="modal-title">Iniciar Secion</h4>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+										<!-- Modal body -->
+										<div class="modal-body">
+											<div class="">
+												<form class="" action="session/loginsession.php" method="post">
+													<div class="form-group">
+														<label for="email">Usuario:</label>
+	    											<input type="text" class="form-control" name="user">
+													</div>
+													<div class="form-group">
+	    											<label for="pwd">Password:</label>
+	    											<input type="password" class="form-control" name="pwd">
+	  											</div>
+													<div class="text-center">
+														<button type="submit" class="btn btn-secondary">Login</button>
+													</div>
+	          						</form>
+											</div><br>
+											<div class="text-left">
+												<h6><a href="#">Recuperar Contraseña</h6>
+											</div>
+        						</div>
+        						<!-- Modal footer -->
+        						<div class="modal-footer">
+          						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        						</div>
+      						</div>
+    						</div>
+  						</div>
 							<ul class="custom-menu">
 								<li><a href="#"><i class="fa fa-user-o"></i> Mi Cuenta</a></li>
 								<li><a href="#"><i class="fa fa-heart-o"></i> Mi lista de deseos</a></li>
 								<li><a href="#"><i class="fa fa-exchange"></i> Comparar</a></li>
 								<li><a href="#"><i class="fa fa-check"></i> Revisar</a></li>
-								<li><a href="#"><i class="fa fa-unlock-alt"></i> Login</a></li>
 								<li><a href="#"><i class="fa fa-user-plus"></i> Crear una Cuenta</a></li>
 							</ul>
 						</li>
@@ -239,12 +278,12 @@
 				<div class="menu-nav">
 					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
 					<ul class="menu-list">
-						<li><a href="index.html">Inicio</a></li>
+						<li><a href="index.php">Inicio</a></li>
 						<li><a href="#">Lo Nuevo</a></li>
 						<li><a href="#">Ofertas</a></li>
 						<li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Paginas <i class="fa fa-caret-down"></i></a>
 							<ul class="custom-menu">
-								<li><a href="index.html">Inicio</a></li>
+								<li><a href="index.php">Inicio</a></li>
 								<li><a href="products.html">Productos</a></li>
 								<li><a href="product-page.html">Detalle de Productos</a></li>
 							</ul>
@@ -688,7 +727,7 @@
 							<li><a href="#">My Wishlist</a></li>
 							<li><a href="#">Compare</a></li>
 							<li><a href="#">Checkout</a></li>
-							<li><a href="#">Login</a></li>
+							<li><a href="login.php#">Login</a></li>
 						</ul>
 					</div>
 				</div>
