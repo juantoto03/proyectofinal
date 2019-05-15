@@ -1,21 +1,21 @@
 <?php
   session_start();
 
-  include('conection.php');
+  include('../session/conection.php');
 
   $user=mysqli_real_escape_string($con, $_POST['user']);
   $pass=mysqli_real_escape_string($con, $_POST['pwd']);
 
   $_SESSION['usuario'] = $user;
 
-  $consult="SELECT * FROM clientes WHERE correo='$user' and  password='$pass'";
+  $consult="SELECT * FROM useradmin WHERE usuario='$user' and  password='$pass'";
   $result=mysqli_query($con, $consult);
   $filas=mysqli_num_rows($result);
 
   if($filas > 0) {
-    header("Location:../index.php");
+    header("Location:../admin/index.php");
   }else {
     echo $filas;
-    header("Location:../index.php?error=true");
+    header("Location:../admin/login.php?error=true");
   }
 ?>

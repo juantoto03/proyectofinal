@@ -1,7 +1,31 @@
 .menu {
-  max-width: 150px;
+  max-width: 350px;
+}
+
+.error {
+  max-width: 350px;
+}
+
+.error {
+  max-width: 350px;
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.whith-main {
+  width: 40%;
+}
+
+.whith-input {
+  width: 30%;
+}
+
+.whith-input-fn {
+  width: 12%;
+}
+
+.ocultar {
+  display: none;
 }
